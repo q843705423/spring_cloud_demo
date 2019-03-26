@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+mybatis:
+  typeAliasesPackage: cn.edu.hziee.model
+  mapperLocations: classpath:mapper/*.xml
+  configuration:
+    mapUnderscoreToCamelCase: true
+---
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/man?useSSL=true&&characterEncoding=utf8
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
